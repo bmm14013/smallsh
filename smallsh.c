@@ -288,8 +288,6 @@ int main(void)
 		outFile[0] = '\0';
 		background = 0;
 	}
-	
-	free(args);
 		
 	return 0;
 }
