@@ -5,7 +5,7 @@
  *
  * Description: Basic shell that contains a subset of features of some well-known shells,
  * 				
- * 				such as bash. See README.txt for a more thorough description. 
+ * 				such as bash. See README for a more thorough description. 
  *
  * Author: Brendan MacIntyre
  *
