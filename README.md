@@ -1,24 +1,37 @@
+# smallsh
+
+A bash-like shell application written in C.
+- Provides a prompt for running commands
+- Handles blank lines and comments, which are lines beginning 
+  with the # character
+- Provides expansion for the variable $$
+- Executes 3 commands: exit, cd, and status via code built into 
+  the shell
+- Executes other commands by creating a new process and searching the PATH environment variable for the command
+- Supports input and output redirection
+- Supports running commands in foreground and background processes
+- Implements custom handlers for 2 signals, SIGINT and SIGTSTP
+
+Basic command structure is: 
+
+	command [arg1 arg2 ...] [< input_file] [> output_file] [&]
+
+Items in square brackets are optional. If the & is included at the end of the input, the command will run in the background. ^Z will enable foreground only mode. Run "exit" to exit shell. 
+
+
+## Installation
+
 
 How to compile and run smallsh:
 
-In the command line run:
+Go to the directory containing smallsh.c and compile the program using the command
 
-gcc -std=c99 -o smallsh smallsh.c
+	gcc -std=c99 -o smallsh smallsh.c
 
-And then to run, enter:
+And then to run the shell, enter:
 
-./smallsh
+	./smallsh
 
-
-Description: smallsh is a basic shell that contains a subset of features of some well-known shells,
- 	     such as bash. It supports the built-in commands, exit, cd, and status. It also supports
-	     non built-in commands by searching the PATH environment variable. Finally, the shell
-	     supports input and output redirection, as well as executing commands in the foreground
-	     and background. To set foreground commands only press ^Z. Basic command structure is:
-	     
-	     command [arg1 arg2 ...] [< input_file] [> output_file] [&]
-	     	
-	     ...where items in square brackets are optional. If & is included, background option is
-	     set to true 
+#	
 
 Written by: Brendan MacIntyre
